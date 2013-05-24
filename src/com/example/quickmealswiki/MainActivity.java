@@ -3,6 +3,7 @@ package com.example.quickmealswiki;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -54,7 +55,7 @@ public class MainActivity extends TabActivity {
 		tabHost.addTab(tabSpecBerry);
  
 		//set Windows tab as default (zero based)
-		tabHost.setCurrentTab(2);
+		tabHost.setCurrentTab(0);
 	}
 
 	@Override
@@ -62,6 +63,22 @@ public class MainActivity extends TabActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()){
+		case R.id.action_settings:
+			//TODO: setting
+			break;
+		case R.id.action_howto:
+			startActivity(new Intent(this, HowTo.class));
+			break;
+		case R.id.action_about:
+			break;
+		}
+		return false;
+		
 	}
 
 }

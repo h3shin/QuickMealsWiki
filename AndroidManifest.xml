@@ -43,6 +43,11 @@
             android:screenOrientation="portrait" 
             android:name=".Favorites"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:label="@string/action_howto" 
+            android:screenOrientation="portrait" 
+            android:name=".HowTo"
+            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>
