@@ -16,45 +16,46 @@ public class MainActivity extends TabActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		DataManager.mainActivity = this;
  
 		Resources ressources = getResources(); 
 		TabHost tabHost = getTabHost(); 
  
-		// Android tab
-		Intent intentAndroid = new Intent().setClass(this, Fridge.class);
-		TabSpec tabSpecAndroid = tabHost
-		  .newTabSpec("Android")
+		// Fridge tab
+		Intent intentFridge = new Intent().setClass(this, Fridge.class);
+		TabSpec tabSpecFridge = tabHost
+		  .newTabSpec("Fridge")
 		  .setIndicator("", ressources.getDrawable(R.drawable.tab_fridge))
-		  .setContent(intentAndroid);
+		  .setContent(intentFridge);
  
-		// Apple tab
-		Intent intentApple = new Intent().setClass(this, SelectIngredients.class);
-		TabSpec tabSpecApple = tabHost
-		  .newTabSpec("Apple")
+		// SelectIngredients tab
+		Intent intentSelectIngredients = new Intent().setClass(this, SelectIngredients.class);
+		TabSpec tabSpecSelectIngredients = tabHost
+		  .newTabSpec("SelectIngredients")
 		  .setIndicator("", ressources.getDrawable(R.drawable.tab_select_ingredients))
-		  .setContent(intentApple);
+		  .setContent(intentSelectIngredients);
  
-		// Windows tab
-		Intent intentWindows = new Intent().setClass(this, ViewFood.class);
-		TabSpec tabSpecWindows = tabHost
-		  .newTabSpec("Windows")
+		// ViewFood tab
+		Intent intentViewFood = new Intent().setClass(this, ViewFood.class);
+		TabSpec tabSpecViewFood = tabHost
+		  .newTabSpec("ViewFood")
 		  .setIndicator("", ressources.getDrawable(R.drawable.tab_view_food))
-		  .setContent(intentWindows);
+		  .setContent(intentViewFood);
  
-		// Blackberry tab
-		Intent intentBerry = new Intent().setClass(this, Favorites.class);
-		TabSpec tabSpecBerry = tabHost
-		  .newTabSpec("Berry")
+		// Favorites tab
+		Intent intentFavorites = new Intent().setClass(this, Favorites.class);
+		TabSpec tabSpecFavorites = tabHost
+		  .newTabSpec("Favorites")
 		  .setIndicator("", ressources.getDrawable(R.drawable.tab_favorites))
-		  .setContent(intentBerry);
+		  .setContent(intentFavorites);
  
 		// add all tabs 
-		tabHost.addTab(tabSpecAndroid);
-		tabHost.addTab(tabSpecApple);
-		tabHost.addTab(tabSpecWindows);
-		tabHost.addTab(tabSpecBerry);
+		tabHost.addTab(tabSpecFridge);
+		tabHost.addTab(tabSpecSelectIngredients);
+		tabHost.addTab(tabSpecViewFood);
+		tabHost.addTab(tabSpecFavorites);
  
-		//set Windows tab as default (zero based)
+		//set ViewFood tab as default (zero based)
 		tabHost.setCurrentTab(0);
 	}
 
