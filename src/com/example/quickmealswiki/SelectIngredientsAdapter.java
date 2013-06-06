@@ -9,17 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
-public class SelectIngredientsAdapter extends ArrayAdapter<Ingredient> {
+public class SelectIngredientsAdapter extends ArrayAdapter<String> {
 
 	private static final String TAG = "SelectIngredientsAdapter";
-	private ArrayList<Ingredient> ingredientsList;
 	Context mContext;
 
 	public SelectIngredientsAdapter(Context context, int textViewResourceId,
-			ArrayList<Ingredient> objects) {
+			ArrayList<String> objects) {
 		super(context, textViewResourceId, objects);
-		this.ingredientsList = new ArrayList<Ingredient>();
-		this.ingredientsList.addAll(objects);
 		this.mContext = context;
 		Log.e(TAG,"Constructor");
 	}
@@ -53,7 +50,7 @@ public class SelectIngredientsAdapter extends ArrayAdapter<Ingredient> {
 			});
 		}
 	    holder = (ViewHolder) convertView.getTag();
-		Ingredient ig = DataManager.mAllIngredients.get(position);
+		Ingredient ig = DataManager.GetIngredient(DataManager.mAllIngredients.get(position));
 		holder.name.setText(ig.GetName());
 		holder.selected.setChecked(ig.IsSelected());
 		holder.selected.setSelected(ig.IsSelected());

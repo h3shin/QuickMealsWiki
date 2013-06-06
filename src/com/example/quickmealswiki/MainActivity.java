@@ -18,6 +18,13 @@ public class MainActivity extends TabActivity {
 		setContentView(R.layout.activity_main);
 		DataManager.mainActivity = this;
  
+		//SharedPreference
+		DataManager.pref = getSharedPreferences("pref", 0);
+		DataManager.editor = DataManager.pref.edit();
+		
+		DataManager.init();
+		DataManager.PopulateIngredients();
+		
 		Resources ressources = getResources(); 
 		TabHost tabHost = getTabHost(); 
  

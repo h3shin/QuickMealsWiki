@@ -33,8 +33,7 @@ public class SelectIngredients extends Activity {
 		listView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				// When clicked, show a toast with the TextView text
-				Ingredient ig = (Ingredient) parent.getItemAtPosition(position);
+				Ingredient ig = (Ingredient) DataManager.GetIngredient(DataManager.mAllIngredients.get(position));
 				CheckBox cb = (CheckBox) view.findViewById(R.id.checkbox);
 				cb.setChecked(!cb.isChecked());
 				cb.setSelected(cb.isChecked());

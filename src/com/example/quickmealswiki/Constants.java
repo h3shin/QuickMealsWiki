@@ -1,8 +1,5 @@
 package com.example.quickmealswiki;
 
-import java.util.Map;
-import java.util.Map.Entry;
-
 public class Constants {
 	
 	public enum FoodType {

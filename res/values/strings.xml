@@ -10,10 +10,11 @@
     <string name="select_ingredients">Select Ingredients</string>
     <string name="view_food">View Food</string>
     <string name="favorites">Favorites</string>
-    <string name="howto_text">In the 1st tab, you can view all the ingredients you selected on the 2nd tab.
-        Once you click on any part of the screen, you can view the recipes of the food you can make with the selected ingredients.
-        \n\nIn the 2nd tab, you can select which ingredients you have, and the change will be reflected on the 1st tab.
-        \n\nIn the 3rd tab, you can view all the recipes available.
-        \n\nWhenever you select a food item and make it your favorite by
-        clicking on a star, it will be saved and the change will be reflected on the 4th tab.</string>
+    <string name="howto_text">In the <b>1st tab</b>, you can view all the ingredients you selected on the 2nd tab.
+        <b>Swipe left or right</b> to <b>view the recipes</b> of the food you can make with the selected ingredients.
+        <b>Long click</b> an item, and you can remove the item from the selected ingredients list.
+        \n\nIn the <b>2nd tab</b>, you can <b>select which ingredients</b> you have, and the change will be reflected on the 1st tab.
+        \n\nIn the <b>3rd tab</b>, you can <b>view all the recipes</b> available.
+        \n\nWhenever you select a food item and make it <b>your favorite</b> by
+        clicking on a star, it will be saved and the change will be reflected on the <b>4th tab</b>.</string>
 </resources>
