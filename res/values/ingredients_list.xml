@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="available_ingredients">
+        <item>Bacon</item>
+        <item>Bok Choy</item>
+        <item>Chinese Cabbage</item>
+        <item>Cucumber</item>
+        <item>Hot Pepper</item>
+        <item>Pepper</item>
+        <item>Radish</item>
+        <item>Sausage</item>
+    </string-array>
+</resources>

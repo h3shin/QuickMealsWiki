@@ -4,15 +4,16 @@
     android:id="@+id/view_flipper"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
+        
     <GridView
         android:id="@+id/fridge_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/shelf"
+        android:background="@drawable/fridge_bg"
+        android:tileMode="repeat"
         android:columnWidth="90dp"
         android:gravity="center"
-        android:horizontalSpacing="10dp"
+        android:horizontalSpacing="5dp"
         android:numColumns="auto_fit"
         android:orientation="vertical"
         android:verticalSpacing="10dp" />
